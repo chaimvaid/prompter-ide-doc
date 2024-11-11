@@ -1,9 +1,18 @@
+---
+layout: default
+title: "Quick Start"
+---
+
 # Quick Start Guide
 
-Follow these steps to start using **Prompter IDE**:
+To get started with Prompter IDE:
 
-1. **Install**: Ensure all dependencies are installed and set up your environment.
-2. **Configure**: Add any necessary configuration files to integrate with Git and other tools.
-3. **Initialize**: Launch Prompter IDE and explore each module's features.
+1. **Install**: Ensure all dependencies are installed.
+2. **Configure**: Set up configuration files as needed.
+3. **Launch**: Start Prompter IDE and explore the modules.
 
-For detailed instructions, refer to the individual module pages.
+For details on each module, check out:
+- [Prompts](prompts.html)
+- [Git](git.html)
+- [File System](filesystem.html)
+- [Terminal](terminal.html)

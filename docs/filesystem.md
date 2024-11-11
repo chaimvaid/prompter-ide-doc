@@ -1,13 +1,15 @@
+---
+layout: default
+title: "File System"
+---
+
 # File System Module
 
-The **File System** module in Prompter IDE helps manage your project files efficiently.
+The File System module helps manage project files directly in Prompter IDE.
 
 ## Features
-- **Browse Files**: Access files within the project directory.
-- **File Actions**: Create, rename, delete, and move files as needed.
-- **Directory Navigation**: Navigate folders and manage directory structures.
+- Browse and manage files.
+- Organize files and folders.
+- Access frequently used files.
 
-## Usage
-1. Go to the File System tab.
-2. Use the directory tree to navigate between folders.
-3. Right-click on files to see additional actions like rename and delete.
+Next: [Terminal Module](terminal.html) or [Git Module](git.html).

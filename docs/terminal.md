@@ -1,13 +1,15 @@
+---
+layout: default
+title: "Terminal"
+---
+
 # Terminal Module
 
-The **Terminal** module provides a built-in command-line interface for executing scripts and commands directly from Prompter IDE.
+The Terminal module provides a built-in command-line interface for executing commands directly within Prompter IDE.
 
 ## Features
-- **Execute Commands**: Run shell commands and view output in real-time.
-- **Integration**: Access the file system and Git operations directly from the terminal.
-- **Script Support**: Execute custom scripts for automation.
+- Run shell commands.
+- Execute scripts and custom commands.
+- Integrates with other modules for workflow flexibility.
 
-## Usage
-1. Open the Terminal tab.
-2. Type commands as you would in a standard shell.
-3. View and manage output within the terminal interface.
+Return to the [Quick Start Guide](quick_start.html) or visit [File System Module](filesystem.html).

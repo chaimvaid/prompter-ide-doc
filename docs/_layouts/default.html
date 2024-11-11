@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div style="display: flex;">
+    <!-- Side Nav -->
+    <aside style="width: 200px; padding: 20px; background-color: #f7f7f7;">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="/docs/index.html">Home</a></li>
+        <li><a href="/docs/quick_start.html">Quick Start</a></li>
+        <li><a href="/docs/prompts.html">Prompts</a></li>
+        <li><a href="/docs/git.html">Git</a></li>
+        <li><a href="/docs/filesystem.html">File System</a></li>
+        <li><a href="/docs/terminal.html">Terminal</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main style="flex-grow: 1; padding: 20px;">
+      {{ content }}
+    </main>
+  </div>
+</body>
+</html>
