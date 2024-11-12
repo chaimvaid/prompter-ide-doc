@@ -24,6 +24,10 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Keep it fixed on the side */
+  top: 0;
+  left: 0;
 }
 
 .sidebar .logo img {
@@ -54,6 +58,7 @@ body {
 
 /* Content styling */
 .content {
-  flex-grow: 1;
+  margin-left: 250px; /* Offset to accommodate the fixed sidebar */
   padding: 40px;
+  flex-grow: 1;
 }
