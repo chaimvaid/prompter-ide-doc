@@ -60,7 +60,7 @@ body {
 
 /* Content styling */
 .content {
-  margin-left: 250px; /* Offset to accommodate the fixed sidebar */
+  margin-left: 20%; /* Offset to accommodate the fixed sidebar */
   padding: 40px;
   flex-grow: 1;
 }
