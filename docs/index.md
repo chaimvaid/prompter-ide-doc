@@ -4,27 +4,26 @@ title: "Home"
 ---
 
 
-Here’s an improved version of the **Quick Start** page based on your prompt:
 
----
-
-# Quick Start
+# Prompter IDE Quick Start
 
 Welcome to Prompter IDE, a plugin designed to bridge the gap between LLM (Large Language Model) chat services and your local file system. This allows you to bring context directly to your LLM, enabling quick reviews and decisions on changes to accept. Here’s how to get started.
 
 ### Overview of Prompter IDE
 
-Prompter IDE is a plugin that connects an LLM with your local file system, making it easy to bring context into LLM conversations. This helps you make informed decisions about the changes proposed by the LLM by allowing you to review and control these changes within your project.
+Prompter IDE connects an LLM with your local file system, making it easy to bring context into LLM conversations. This helps you make informed decisions about the changes proposed by the LLM by allowing you to review and control these changes within your project.
 
 ### Steps to Get Started
 
 1. **Install the Plugin**: Follow the installation instructions to get Prompter IDE set up as a plugin within your system.
 
-2. **Plugin Sections**: The plugin consists of various sections designed to handle prompts, manage files, and review history, all of which are configured to work seamlessly with your LLM.
+2. **Configure Extension Sites**: Before using the extension, add the sites where you want it to be active in the extension options. Go to the extension settings, enable it, and specify the sites (one per line) to ensure Prompter IDE functions where needed.
 
-3. **Docker Installation**: Ensure Docker is installed on your system, as it’s essential for running the plugin server.
+3. **Plugin Sections**: The plugin consists of various sections designed to handle prompts, manage files, and review history, all configured to work seamlessly with your LLM.
 
-4. **Run the Plugin Using Docker**: Prompter IDE requires a Docker-based server to enable file system access. Use the Docker command below to run the plugin:
+4. **Docker Installation**: Ensure Docker is installed on your system, as it’s essential for running the plugin server.
+
+5. **Run the Plugin Using Docker**: Prompter IDE requires a Docker-based server to enable file system access. Use the Docker command below to run the plugin:
 
     ```bash
     docker run -d \
@@ -39,7 +38,7 @@ Prompter IDE is a plugin that connects an LLM with your local file system, makin
       chaimvaid/prompter-ide-server
     ```
 
-5. **Server Parameters**: Configure the server parameters as follows:
+6. **Server Parameters**: Configure the server parameters as follows:
    - **API_SECRET**: Set an API secret to secure access.
    - **Mount Directories**:
      - `/usr/projects`: This should be the project directory you grant access to.
