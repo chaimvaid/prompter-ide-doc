@@ -3,8 +3,6 @@ layout: default
 title: "Home"
 ---
 
-
-
 # Prompter IDE Quick Start
 
 Welcome to Prompter IDE, a plugin designed to bridge the gap between LLM (Large Language Model) chat services and your local file system. This allows you to bring context directly to your LLM, enabling quick reviews and decisions on changes to accept. Here’s how to get started.
@@ -15,7 +13,7 @@ Prompter IDE connects an LLM with your local file system, making it easy to brin
 
 ### Steps to Get Started
 
-1. **Install the Plugin**: Follow the installation instructions to get Prompter IDE set up as a plugin within your system.
+1. **Install the Plugin**: [Install Prompter IDE](https://chromewebstore.google.com/detail/prompter-ide/chiamapkmadbnnfgkkipkeojnfofjfba) from the Chrome Web Store.
 
 2. **Configure Extension Sites**: Before using the extension, add the sites where you want it to be active in the extension options. Go to the extension settings, enable it, and specify the sites (one per line) to ensure Prompter IDE functions where needed.
 
