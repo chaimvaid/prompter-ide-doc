@@ -7,9 +7,6 @@ title: "Home"
 
 Welcome to Prompter IDE, a plugin designed to bridge the gap between LLM (Large Language Model) chat services and your local file system. This allows you to bring context directly to your LLM, enabling quick reviews and decisions on changes to accept. Here’s how to get started.
 
----
-
----
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kpwF5hXLi3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
