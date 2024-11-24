@@ -37,37 +37,63 @@ Prompter IDE connects an LLM with your local file system, making it easy to brin
 
 ---
 
-### Initialize the System
+### macOS/Linux Setup
 
-Before running the server, you need to set up the necessary directories for history and prompts.
+If you are on macOS or Linux, follow these steps to set up Prompter IDE:
 
-1. Open your terminal and create the `.prompter-ide` directory in your home directory:
+1. **Create Necessary Directories**
+   Open your terminal and run the following command:
    ```bash
    mkdir -p ~/.prompter-ide/{history,prompts}
    ```
 
-2. This will create:
+   This will create:
    - `~/.prompter-ide/history`: A directory to store internal version control history.
    - `~/.prompter-ide/prompts`: A directory to store saved prompts and snippets.
 
+2. **Run the Plugin Using Docker**
+   Start the Prompter IDE server with the following command:
+   ```bash
+   docker run -d \
+     --name promter-ide-server \
+     --restart always \
+     -e API_SECRET=secret \
+     -v "$(pwd):/usr/projects" \
+     -v "$HOME/.prompter-ide/prompts:/usr/prompts" \
+     -v "$HOME/.prompter-ide/history:/usr/history" \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     -p 8033:8030 \
+     chaimvaid/prompter-ide-server
+   ```
+
 ---
 
-### Run the Plugin Using Docker
+### Windows Setup
 
-Prompter IDE requires a Docker-based server to enable file system access. Use the following Docker command to run the plugin:
+If you are on Windows, follow these steps:
 
-```bash
-docker run -d \
-  --name promter-ide-server \
-  --restart always \
-  -e API_SECRET=secret \
-  -v "$(pwd):/usr/projects" \
-  -v "$HOME/.prompter-ide/prompts:/usr/prompts" \
-  -v "$HOME/.prompter-ide/history:/usr/history" \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -p 8033:8030 \
-  chaimvaid/prompter-ide-server
-```
+1. **Create Necessary Directories**
+   Open PowerShell and run the following commands:
+   ```powershell
+   mkdir -p "$HOME\.prompter-ide\history"
+   mkdir -p "$HOME\.prompter-ide\prompts"
+   ```
+
+2. **Run the Plugin Using Docker**
+   Update the volume mapping in the Docker command to use Windows paths. For example:
+   ```powershell
+   docker run -d `
+     --name promter-ide-server `
+     --restart always `
+     -e API_SECRET=secret `
+     -v C:\Users\<your-username>\.prompter-ide\prompts:/usr/prompts `
+     -v C:\Users\<your-username>\.prompter-ide\history:/usr/history `
+     -v \\.\pipe\docker_engine:\\.\pipe\docker_engine `
+     -p 8033:8030 `
+     chaimvaid/prompter-ide-server
+   ```
+
+   Replace `<your-username>` with your Windows username.
 
 ---
 
