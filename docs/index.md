@@ -88,13 +88,17 @@ If you are on Windows, follow these steps:
      -e API_SECRET=secret `
      -v C:\Users\<your-username>\.prompter-ide\prompts:/usr/prompts `
      -v C:\Users\<your-username>\.prompter-ide\history:/usr/history `
+     -v C:\path\to\your\projects:/usr/projects `
      -v \\.\pipe\docker_engine:\\.\pipe\docker_engine `
      -p 8033:8030 `
      chaimvaid/prompter-ide-server
    ```
 
-   Replace `<your-username>` with your Windows username.
+    Replace:
+   - `<your-username>` with your Windows username.
+   - `C:\path\to\your\projects` with the full path to your projects directory.
 
+   
 ---
 
 ### Server Parameters
