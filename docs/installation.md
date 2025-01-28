@@ -14,7 +14,7 @@ title: "Installation"
 ## Steps
 
 1. **Install the Chrome Extension**
-   [Install Prompter IDE](https://chrome.google.com/webstore) from the Chrome Web Store.
+   [Install Prompter IDE](https://chromewebstore.google.com/detail/prompter-ide/chiamapkmadbnnfgkkipkeojnfofjfba) from the Chrome Web Store.
 
 2. **Configure Extension Sites**
    Before using the extension, add the sites where you want it to be active in the extension options.
