@@ -1,5 +1,3 @@
-/* style.css */
-
 /* General styling */
 body {
   margin: 0;
@@ -16,7 +14,7 @@ body {
   width: 100%;
 }
 
-
+/* Sidebar styling */
 .sidebar {
   width: 20%;
   background-color: #333;
@@ -24,20 +22,30 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: 100vh; /* Full viewport height */
-  position: fixed; /* Keep it fixed on the side */
+  align-items: flex-start;
+  text-align: left;
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
+}
+
+.sidebar .logo {
+  width: 100%; /* Full width for proper centering */
+  text-align: center; /* Center-align content */
+  margin-bottom: 20px; /* Add space below the logo */
+}
+
+.sidebar .logo a {
+  display: inline-block; /* Ensure the link is inline for proper centering */
 }
 
 .sidebar .logo img {
   width: 100px;
   height: auto;
-  margin-bottom: 20px;
 }
 
+/* Navigation styling */
 .sidebar nav ul {
   list-style-type: none;
   padding: 0;
@@ -52,16 +60,75 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 1.1em;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
 }
 
 .sidebar nav ul li a:hover {
-  text-decoration: underline;
+  background-color: #444;
+}
+
+/* Submenu styling */
+.sidebar nav ul li.has-submenu > a {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submenu-icon {
+  margin-right: 10px;
+}
+
+.sidebar nav ul li ul.submenu {
+  list-style-type: none;
+  padding-left: 20px; /* Indent for nested items */
+  margin-top: 10px;
+  display: none; /* Hidden by default */
+}
+
+.sidebar nav ul li ul.submenu li a {
+  font-size: 0.9em;
+  padding: 5px 15px;
+}
+
+.sidebar nav ul li ul.submenu li a:hover {
+  background-color: #555;
+}
+
+/* Collapsed submenu toggle */
+.sidebar nav ul li ul.submenu.collapsed {
+  display: block;
 }
 
 /* Content styling */
 .content {
   margin-left: 25%; /* Offset to accommodate the fixed sidebar */
-  width: 80%;
+  width: 75%;
   padding: 40px;
   flex-grow: 1;
+}
+
+/* Code block styling */
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  overflow: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+code {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 90%;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
 }

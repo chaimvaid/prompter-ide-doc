@@ -3,25 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/all.min.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/images/logo.svg' | relative_url }}" type="image/svg+xml">
 </head>
 <body>
   <div class="container">
     <!-- Side Nav -->
     <aside class="sidebar">
       <div class="logo">
-        <img src="assets/images/logo.svg" alt="Prompter IDE Logo" />
+        <a href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Prompter IDE Logo" />
+        </a>
       </div>
       <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <!-- <li><a href="quick_start.html">Quick Start</a></li>
-          <li><a href="prompts.html">Prompts</a></li>
-          <li><a href="git.html">Git</a></li>
-          <li><a href="filesystem.html">File System</a></li>
-          <li><a href="terminal.html">Terminal</a></li> -->
+        <ul class="menu">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/overview.html' | relative_url }}">Overview</a></li>
+          <li><a href="{{ '/installation.html' | relative_url }}">Installation</a></li>
+          <li class="has-submenu">
+            <a href="{{ '/ui-guide.html' | relative_url }}" onclick="toggleSubmenu(event, 'Usage')">
+              <i class="fas fa-chevron-right submenu-icon"></i> Usage
+            </a>
+            <ul class="submenu">
+              <li><a href="{{ '/usage/epic.html' | relative_url }}">Epic</a></li>
+              <li><a href="{{ '/usage/prompt.html' | relative_url }}">Prompt</a></li>
+              <li><a href="{{ '/usage/snippet.html' | relative_url }}">Snippet</a></li>
+              <li><a href="{{ '/usage/bulk-insert-files.html' | relative_url }}">Bulk Insert Files</a></li>
+              <li><a href="{{ '/usage/merge-back.html' | relative_url }}">Merge Back to File System</a></li>
+            </ul>
+          </li>
+          <li><a href="{{ '/advanced-configuration.html' | relative_url }}">Advanced Configuration</a></li>
+          <li><a href="{{ '/faq.html' | relative_url }}">FAQ</a></li>
         </ul>
       </nav>
     </aside>
@@ -31,5 +45,43 @@
       {{ content }}
     </main>
   </div>
+
+  <!-- Script for collapsible menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Restore submenu state from sessionStorage
+      const activeMenu = sessionStorage.getItem('activeMenu');
+      if (activeMenu) {
+        const submenu = document.querySelector(`.has-submenu > a[onclick*='${activeMenu}']`).nextElementSibling;
+        const icon = document.querySelector(`.has-submenu > a[onclick*='${activeMenu}'] .submenu-icon`);
+        if (submenu) {
+          submenu.classList.add('collapsed');
+          icon.classList.remove('fa-chevron-right');
+          icon.classList.add('fa-chevron-down');
+        }
+      }
+    });
+
+    function toggleSubmenu(event, menuName) {
+      event.preventDefault();
+      const submenu = event.target.nextElementSibling;
+      const icon = event.target.querySelector('.submenu-icon');
+      if (submenu) {
+        submenu.classList.toggle('collapsed');
+        icon.classList.toggle('fa-chevron-right');
+        icon.classList.toggle('fa-chevron-down');
+
+        // Save the state to sessionStorage
+        if (submenu.classList.contains('collapsed')) {
+          sessionStorage.setItem('activeMenu', menuName);
+        } else {
+          sessionStorage.removeItem('activeMenu');
+        }
+      }
+      if (event.target.href) {
+        window.location.href = event.target.href;
+      }
+    }
+  </script>
 </body>
 </html>

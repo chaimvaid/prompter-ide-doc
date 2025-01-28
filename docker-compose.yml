@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  jekyll:
+    image: jekyll/jekyll:latest
+    container_name: github-pages-site
+    volumes:
+      - .:/srv/jekyll:cached
+    ports:
+      - "4000:4000"
+    command: >
+      sh -c "bundle install && bundle exec jekyll serve --watch --drafts --host 0.0.0.0"
+    stdin_open: true
+    tty: true
