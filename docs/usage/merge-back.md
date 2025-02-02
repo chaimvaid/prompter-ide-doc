@@ -32,6 +32,14 @@ If the LLM chat renders the generated code as an editor or in another form:
 3. The right side of the slider will initially be empty. Paste the copied code into the right side.
 4. Proceed as in Scenario 1 to review, merge, and save the changes.
 
+### Scenario 3: Context Menu Selection
+
+In addition to the above workflows, you can use the **context menu** to insert selected content into the merge element:
+1. Select the desired text from any document or code block.
+2. Right-click to open the **context menu**.
+3. Click **Open in Merge** to automatically insert the selection into the merge element.
+4. From there, proceed as in the previous scenarios to merge and save the changes.
+
 ---
 
 ## Create Tab
