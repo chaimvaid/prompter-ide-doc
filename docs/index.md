@@ -3,6 +3,8 @@ layout: default
 title: "Home"
 ---
 
+<a href="https://www.producthunt.com/posts/prompter-ide?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-prompter&#0045;ide" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=843255&theme=neutral&t=1738618336997" alt="Prompter&#0032;IDE - Prompter&#0032;IDE&#0058;&#0032;Connect&#0032;LLM&#0032;chats&#0032;directly&#0032;to&#0032;your&#0032;file&#0032;system | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 # Prompter IDE Quick Start
 
 Welcome to Prompter IDE, a plugin that bridges the gap between LLM (Large Language Model) chat services and your local file system. With Prompter IDE, you can provide context directly to your LLM from your project files, review proposed changes, and quickly decide what to accept or reject.
